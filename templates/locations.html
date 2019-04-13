@@ -39,7 +39,7 @@ require([
     container: "viewDiv",
     map: map,
     center: [-76.9414,38.9953],
-    zoom: 10,
+    zoom: 9,
     tilt: 70
   });
 
@@ -51,14 +51,6 @@ require([
       latitude: JSON.parse(data)[i][1]
     });
 
-    // Create a symbol for drawing the point
-    var markerSymbol = new SimpleMarkerSymbol({
-      color: [226, 119, 40],
-      outline: {
-        color: [255, 255, 255],
-        width: 1
-      }
-    });
 
     // Create attributes
     var attributes = {
@@ -88,12 +80,44 @@ require([
     view.graphics.add(pointGraphic);
   }
 
+
+  var point = new Point({
+    longitude: {{lon}},
+    latitude: {{lat}}
+  });
+
+  // Create attributes
+  var attributes = {
+    Name: "Emergency!",  // The name of the pipeline
+    City: "Hyattesville"  // The length of the pipeline
+  };
+
+  // Create popup template
+  var popupTemplate = {
+    title: "Emergency!",
+    content: "Hyattesville"
+  };
+
+  // Create a graphic and add the geometry and symbol to it
+  var pointGraphic = new Graphic({
+    geometry: point,
+    symbol: {
+     type: "picture-marker",
+     url: "https://cdn1.iconfinder.com/data/icons/medicals-colored-2/100/Medical_2_15-512.png",
+     width: "26px",
+     height: "26px"
+   },
+    attributes: attributes,
+    popupTemplate: popupTemplate
+  });
+
+  view.graphics.add(pointGraphic);
+
 });</script>
 </head>
 <body>
-  <script>
-    var someJavaScriptVar = '{{hosp|tojson}}';
-  </script>
-  <div id="viewDiv"></div>
+  <div id="viewDiv">
+      <button style="height: 100%; width" type="button" onclick="window.location.href='{{ url_for( 'blog.attached' ) }}';">Find!</button>
+  </div>
 </body>
 </html>
