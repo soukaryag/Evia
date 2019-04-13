@@ -77,7 +77,7 @@ function predictFromImage(imageDataUrl) { //supports predict and play modes
 
             var name = (predictions[0]).tagName;
             if(name != 'Nothing'){
-              window.location.href = "/user_" + (String(name)).toLowerCase();}
+              window.location.href = "/user_EMT";}
 
             if(mode == "predict") {
 
@@ -102,7 +102,7 @@ function predictFromImage(imageDataUrl) { //supports predict and play modes
             }
 
         },
-        
+
     });
 }
 
