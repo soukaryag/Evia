@@ -6,16 +6,48 @@ import psycopg2
 import gspread
 import readCSVs
 import json
-
+import random
 
 bp = Blueprint('blog', __name__)
 
+hosp = readCSVs.giveHosp()
+l = len(hosp)
+lat = [hosp[0][0], hosp[0][0]]
+lon = [hosp[0][1], hosp[0][1]]
+for h in hosp:
+    if h[0] < lat[0]:
+        lat[0] = h[0]
+    elif h[0] > lat[1]:
+        lat[1] = h[0]
+
+    if h[1] < lon[0]:
+        lon[0] = h[1]
+    elif h[1] > lon[1]:
+        lon[1] = h[1]
+
+randX = random.uniform(lat[0], lat[1])
+randY = random.uniform(lon[0], lon[1])
+
+minD = 1000
+minX = 0
+minY = 0
+for h in hosp:
+    temp = (h[0], h[1])
+    dist = readCSVs.euclidian(temp, (randX, randY))
+    if dist < minD:
+        minD = dist
+        minX = h[0]
+        minY = h[1]
+
+print(minD)
+
 @bp.route('/locations')
 def arc():
-    hosp = readCSVs.giveHosp()
-    l = len(hosp)
-    print(hosp)
-    return render_template('locations.html', hosp=json.dumps(hosp), l=l)
+    return render_template('locations.html', hosp=json.dumps(hosp), l=l, lat=randY, lon=randX)
+
+@bp.route('/attached')
+def attached():
+    return render_template('attached.html', lat=randY, lon=randX, minX=minX, minY=minY)
 
 @bp.route('/user_EMT')
 def user():
