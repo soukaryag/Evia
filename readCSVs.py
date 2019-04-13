@@ -6,7 +6,7 @@ from geopy.distance import great_circle
 def giveHosp():
     df = pd.read_csv('Hospitals.csv')
 
-    col_keep = ["X", "Y", "NAME", "ADDRESS", "BEDS", "TRAUMA", "STATE", "CITY"]
+    col_keep = ["X", "Y", "NAME", "ADDRESS", "STATE", "CITY",  "TRAUMA", "BEDS"]
 
     df = df[col_keep]
 
@@ -28,7 +28,16 @@ def giveHosp():
             if euc < 3:
                 md.append(row)
 
-    return md
+    ret = []
+    j = 0
+    for m in md:
+        temp = []
+        for i in range(0, len(col_keep)):
+            temp.append(m[i])
+        ret.append(temp)
+    return ret
+
+#print(giveHosp())
 
 def giveEMS():
     df = pd.read_csv('Emergency_Medical_Service_EMS_Stations.csv')

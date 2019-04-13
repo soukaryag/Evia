@@ -5,12 +5,17 @@ from flask import (
 import psycopg2
 import gspread
 import readCSVs
+import json
+
 
 bp = Blueprint('blog', __name__)
 
 @bp.route('/locations')
 def arc():
-    return render_template('locations.html')
+    hosp = readCSVs.giveHosp()
+    l = len(hosp)
+    print(hosp)
+    return render_template('locations.html', hosp=json.dumps(hosp), l=l)
 
 @bp.route('/user_EMT')
 def user():
