@@ -6,6 +6,10 @@ import psycopg2
 
 bp = Blueprint('blog', __name__)
 
+@bp.route('/locations')
+def arc():
+    return render_template('locations.html')
+
 @bp.route('/user_EMT')
 def user():
     return render_template('user.html')
