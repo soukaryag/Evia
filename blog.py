@@ -4,7 +4,6 @@ from flask import (
     Blueprint, redirect, render_template, request, url_for, g, flash
 )
 import psycopg2
-import gspread
 
 bp = Blueprint('blog', __name__)
 
