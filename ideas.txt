@@ -3,6 +3,7 @@ mental health
 education
 Esri ArcGIS API
 inventory
+
 project idea:
   EMS have a detachable tablet which can signal hospitals in nearby
 proximities (Esri ArcGIS API) about open beds and also notify them about the
@@ -14,3 +15,9 @@ low on inventory/supplies.
 the eight-minute target became the rigid ultimate standard of EMS operations.
 In extreme cases, ambulance services have been penalized for not meeting the
 standard of eight minutes.
+
+**
+EMRs staff rural ambulance stations, community volunteer ambulance services,
+fire departments, police departments, industrial ambulances or mobile treatment
+centers.
+**
