@@ -2,7 +2,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>Locations</title>
+<title>Map</title>
 <style>
   html, body, #viewDiv {
     padding: 0;
@@ -17,37 +17,83 @@
   <script>
 require([
   "esri/Map",
-  "esri/views/SceneView",
-  "esri/layers/FeatureLayer"
-], function(Map, SceneView, FeatureLayer) {
+  "esri/views/MapView",
+  "esri/Graphic",
+  "esri/geometry/Point",
+  "esri/symbols/SimpleMarkerSymbol",
+  "esri/geometry/Polyline",
+  "esri/symbols/SimpleLineSymbol",
+  "esri/geometry/Polygon",
+  "esri/symbols/SimpleFillSymbol"
+], function(Map, MapView,
+      Graphic, Point, SimpleMarkerSymbol,
+      Polyline, SimpleLineSymbol,
+      Polygon, SimpleFillSymbol
+) {
 
   var map = new Map({
     basemap: "satellite"
   });
 
-  // Trailheads point feature layer
-  var featureLayer = new FeatureLayer({
-    url: "https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Trailheads/FeatureServer/0"
-  });
-
-  map.add(featureLayer);
-
-  var view = new SceneView({
+  var view = new MapView({
     container: "viewDiv",
-    map: map
+    map: map,
+    center: [-76.9414,38.9953],
+    zoom: 10,
+    tilt: 70
   });
 
-  view.when(function(){
-    view.goTo({
-      center: [-76.9414,38.9953],
-      zoom: 15,
-      tilt: 70
-    })
-  });
+  var data = {{hosp|tojson}};
+  for (i = 0; i < {{l}}; i++) {
+    // Create a point
+    var point = new Point({
+      longitude: JSON.parse(data)[i][0],
+      latitude: JSON.parse(data)[i][1]
+    });
+
+    // Create a symbol for drawing the point
+    var markerSymbol = new SimpleMarkerSymbol({
+      color: [226, 119, 40],
+      outline: {
+        color: [255, 255, 255],
+        width: 1
+      }
+    });
+
+    // Create attributes
+    var attributes = {
+      Name: JSON.parse(data)[i][2],  // The name of the pipeline
+      City: JSON.parse(data)[i][4]  // The length of the pipeline
+    };
+
+    // Create popup template
+    var popupTemplate = {
+      title: JSON.parse(data)[i][2],
+      content: JSON.parse(data)[i][3]
+    };
+
+    // Create a graphic and add the geometry and symbol to it
+    var pointGraphic = new Graphic({
+      geometry: point,
+      symbol: {
+       type: "picture-marker",
+       url: "https://cdn1.iconfinder.com/data/icons/medicine-pt-7/100/051_-_hospital_map_marker_pin_doctor-512.png",
+       width: "26px",
+       height: "26px"
+     },
+      attributes: attributes,
+      popupTemplate: popupTemplate
+    });
+
+    view.graphics.add(pointGraphic);
+  }
 
 });</script>
 </head>
 <body>
+  <script>
+    var someJavaScriptVar = '{{hosp|tojson}}';
+  </script>
   <div id="viewDiv"></div>
 </body>
 </html>
