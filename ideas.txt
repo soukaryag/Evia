@@ -3,7 +3,6 @@ mental health
 education
 Esri ArcGIS API
 inventory
-
 project idea:
   EMS have a detachable tablet which can signal hospitals in nearby
 proximities (Esri ArcGIS API) about open beds and also notify them about the
