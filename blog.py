@@ -42,6 +42,10 @@ for h in hosp:
 
 # print(minX, minY)
 
+@bp.route('/medical_history')
+def medical_history():
+    return render_template('medical_history.html')
+
 @bp.route('/results')
 def results():
     return render_template('results.html')
