@@ -77,7 +77,7 @@ function predictFromImage(imageDataUrl) { //supports predict and play modes
 
             var name = (predictions[0]).tagName;
             if(name != 'Nothing'){
-              window.location.href = "/user_EMT";}
+              window.location.href = "/locations";}
 
             if(mode == "predict") {
 
