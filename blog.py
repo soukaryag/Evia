@@ -11,7 +11,9 @@ import random
 bp = Blueprint('blog', __name__)
 
 hosp = readCSVs.giveHosp()
+ems = readCSVs.giveEMS()
 l = len(hosp)
+l2 = len(ems)
 lat = [hosp[0][0], hosp[0][0]]
 lon = [hosp[0][1], hosp[0][1]]
 for h in hosp:
@@ -35,20 +37,47 @@ for h in hosp:
     temp = [h[0], h[1]]
     dist = readCSVs.euclidian(temp, [randX, randY])
     if dist < minD:
-        print(dist)
         minD = dist
         minX = h[0]
         minY = h[1]
 
 # print(minX, minY)
 
+@bp.route('/vitals_arms')
+def vitals_arms():
+    return render_template('vitals_arms.html')
+
+@bp.route('/vitals_chest')
+def vitals_chest():
+    return render_template('vitals_chest.html')
+
+@bp.route('/vitals_torso')
+def vitals_torso():
+    return render_template('vitals_torso.html')
+
+@bp.route('/vitals_legs')
+def vitals_legs():
+    return render_template('vitals_legs.html')
+
+@bp.route('/vitals_shoulder')
+def vitals_shoulder():
+    return render_template('vitals_shoulder.html')
+
+@bp.route('/vitals_head')
+def vitals_head():
+    return render_template('vitals_head.html')
+
 @bp.route('/medical_history')
 def medical_history():
     return render_template('medical_history.html')
 
-@bp.route('/results')
-def results():
-    return render_template('results.html')
+@bp.route('/med')
+def med():
+    return render_template('med.html')
+
+@bp.route('/pat_info')
+def pat_info():
+    return render_template('pat_info.html')
 
 @bp.route('/vitals')
 def vitals():
@@ -58,9 +87,14 @@ def vitals():
 def attached():
     return render_template('attached.html', lat=randY, lon=randX, minX=minX, minY=minY)
 
+@bp.route('/locations_found')
+def locations_found():
+    return render_template('locations_found.html', hosp=json.dumps(hosp), ems=json.dumps(ems), l=l, l2=l2, lat=randY, lon=randX)
+
 @bp.route('/locations')
 def arc():
-    return render_template('locations.html', hosp=json.dumps(hosp), l=l, lat=randY, lon=randX)
+    t = random.randint(4,8)
+    return render_template('locations.html', hosp=json.dumps(hosp), ems=json.dumps(ems), l=l, l2=l2, lat=randY, lon=randX, time=t)
 
 @bp.route('/biometrics')
 def biometrics():

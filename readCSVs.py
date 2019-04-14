@@ -68,7 +68,14 @@ def giveEMS():
         if row['STATE'] == "MD":
             temp = [row['X'], row['Y']]
             euc = euclidian(xfinity, temp)
-            if euc < 50:
+            if euc < 20:
                 md.append(row)
 
-    return md
+    ret = []
+    j = 0
+    for m in md:
+        temp = []
+        for i in range(0, len(col_keep)):
+            temp.append(m[i])
+        ret.append(temp)
+    return ret

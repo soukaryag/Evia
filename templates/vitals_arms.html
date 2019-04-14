@@ -436,6 +436,13 @@
 
 <body style="background: #0abde3">
 
+  <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:15%; color: #000000">
+    <h3 class="w3-bar-item">Injuries</h3>
+    <a href="#" class="w3-bar-item w3-button">Tendonitis</a>
+    <a href="#" class="w3-bar-item w3-button">Fracture</a>
+    <a href="#" class="w3-bar-item w3-button">Sprains</a>
+    <a href="#" class="w3-bar-item w3-button">Dislocation</a>
+  </div>
 
   <div class="wrapper">
     <div class="left">
@@ -470,7 +477,7 @@
             <label for="myGenderFemale"></label>
           </div>
 
-          <h style="padding-left:9em; color:#dcdde1; font-size:40px; font-family: Ubuntu; width: 50%"><span class="counter" data-count="97">0</span><span class="littlex">° F</span></h>
+          <h style="padding-left:9em; color:#dcdde1; font-size:40px; font-family: Ubuntu; width: 50%"><span  data-count="97">97</span><span class="littlex">° F</span></h>
         </div>
 
         <div style="padding-top:2em"><h style="color:white; font-size:40px; font-family: Ubuntu; width: 100%;">Heart Rate</h></div>
@@ -568,18 +575,18 @@ setTimeout(countupnow,1000);
 
         <!-- <div id="totalAnswerRateIncrease">
           <div id="totalAnswerRateIncrease-number">
-            <span class="counter" data-count="97">0</span><span class="littlex">%</span>
+            <span  data-count="97">0</span><span class="littlex">%</span>
           </div>
         </div> -->
         <div><h style="color:white; font-size:40px; font-family: Ubuntu; width: 50%">Oxygen</h>
         <h style="color:white; font-size:40px; font-family: Ubuntu; padding-left:6em">Blood Pressure</h></div>
 
-        <div style="color:#dcdde1; font-size:55px; font-family: Ubuntu; padding-left:4%; padding-top:0.1em"><span class="counter" data-count="98">0</span><span class="littlex">%</span>
-          <h style="padding-left:6em"><span class="counter" data-count="120">0</span><span class="littlex">/</span><span class="counter" data-count="80">0</span></h>
+        <div style="color:#dcdde1; font-size:55px; font-family: Ubuntu; padding-left:4%; padding-top:0.1em"><span  data-count="98">98</span><span class="littlex">%</span>
+          <h style="padding-left:6em"><span  data-count="120">120</span><span class="littlex">/</span><span  data-count="80">90</span></h>
         </div>
 
         <!-- <div><h style="color:white; font-size:40px; font-family: Ubuntu; width: 100%; padding-left:80%">Oxygen</h></div>
-        <div style="color:#dcdde1; font-size:55px; font-family: Ubuntu; padding-left:90%"><span class="counter" data-count="98">0</span><span class="littlex">%</span></div> -->
+        <div style="color:#dcdde1; font-size:55px; font-family: Ubuntu; padding-left:90%"><span  data-count="98">0</span><span class="littlex">%</span></div> -->
 
     </div>
   </div>
@@ -744,24 +751,24 @@ setTimeout(countupnow,1000);
   </script>
 
 
-<div id="dockContainer">
-  <div id="dockWrapper">
-    <ul class="osx-dock">
-      <li class="active" style="padding-right:4em">
-        <a href="/pat_info" title="Patient Info"><img src="{{ url_for('static', filename='images/patient.png') }}" /></a>
-      </li>
-      <li style="padding-right:4em">
-        <a href="#" title="Medical Condition"><img src="{{ url_for('static', filename='images/condition.png') }}" /></a>
-      </li>
+  <div id="dockContainer">
+    <div id="dockWrapper">
+      <ul class="osx-dock">
+        <li class="active" style="padding-right:4em">
+          <a href="/pat_info" title="Patient Info"><img src="{{ url_for('static', filename='images/patient.png') }}" /></a>
+        </li>
         <li style="padding-right:4em">
-        <a href="/medical_history" title="Medical History"><img src="{{ url_for('static', filename='images/history.png') }}" /></a>
-      </li>
-        <li style="padding-right:4em">
-        <a href="/med" title="Medication Given"><img src="{{ url_for('static', filename='images/medication.png') }}" /></a>
-      </li>
-    </ul>
+          <a href="#" title="Medical Condition"><img src="{{ url_for('static', filename='images/condition.png') }}" /></a>
+        </li>
+          <li style="padding-right:4em">
+          <a href="/medical_history" title="Medical History"><img src="{{ url_for('static', filename='images/history.png') }}" /></a>
+        </li>
+          <li style="padding-right:4em">
+          <a href="/med" title="Medication Given"><img src="{{ url_for('static', filename='images/medication.png') }}" /></a>
+        </li>
+      </ul>
+    </div>
   </div>
-</div>
 
 
 
