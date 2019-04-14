@@ -1,374 +1,739 @@
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <link rel="dns-prefetch" href="//s3.envato.com" />
+<!DOCTYPE html>
+<!--[if lt IE 9 ]>
+<html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]>
+<html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
 
-<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"fcf8d519de","applicationID":"13909","transactionName":"NTU0DRQNDwshOmIZBRM3dR8TDg84Nys/FRQYBSoLAxQKAjM=","queueTime":0,"applicationTime":18,"agent":"","atts":"DXgvW1wZQRQtPChSS1QZNR0DIQIJPScjUl1UKSkVRFgFBig7KFxTBD8rDAMRFzg0OiIEHhU1NltcQAsTMDh3X15UdngQFkBZRXJ9Y0FARXRsSEhbW0VoajgDFAQFOx4DDBdFfmoAHwsfNjYYSVdNV2RgGhkfEjUtCkYsN0d1eGNASlYNMxdQVlhHPH55WVE3KioVAzUGBQ8hOV9ERW10SlBCSywMHAA8XVY2MxIDQiQCJyMiWVE1MigWCwdMUHdmfV5CQGJpV1dSUEcXKSsRAx91b0pRTFBRZmRvAhQAMykQCQxBXWYsfhJCQ2hjWxsf"}</script>
-<script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Medical SVG Animated Icons Preview - CodeCanyon</title>
-    <meta name="description" content="&amp;lt;p&amp;gt;20 beautiful svg animated icons ideal for medical related displays such as blogs, pages,...">
-    <meta name="robots" content="noindex, follow" />
-    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+<head>
 
-    <link rel="stylesheet" media="all" href="https://public-assets.envato-static.com/assets/market/core/index-58ab6e559638303b2765d2ef8e7a8d138b722f759b74883019c6e168584e2f8e.css" />
-    <link rel="stylesheet" media="all" href="https://public-assets.envato-static.com/assets/market/pages/preview/index-004d35cdd5d555cdd3e956d1b916825642de06529f0fe91fd9f390813761d2fc.css" />
+  <style>
+    * {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: #F0ECE7;
+}
+.mr20 {
+margin-right: 20px;
+}
+.container {
+  overflow: hidden;
+  width: 1080px;
+  padding: 40px 0;
+  margin: 0 auto;
+}
+.box {
+  cursor: pointer;
+  display: block;
+  float: left;
+  width: 200px;
+  margin-bottom: 50px;
+}
+.box .title {
+  margin-bottom: 20px;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #0E1644;
+  text-align: center;
+}
+.box .svg {
+  width: 180px;
+  height: 180px;
+  border-radius: 100%;
+  margin: 0 10px;
+  background: #FFF;
+  box-shadow: 0 5px 5px #999;
+  transition: all 0.2s linear;
+}
+.box:hover .svg {
+  box-shadow: 0 5px 5px #666;
+}
+.svg g {
+  transform-origin: 90px 90px;
+  transition: all 0.2s linear;
+}
+.line {
+  clear: both;
+  width: 100%;
+  height: 4px;
+  margin-bottom: 20px;
+  background: #CCC4B0;
+}
+/*Medical Square css begin*/
+#svg-medical-square .cls-1 {
+  fill: none;
+  stroke: #bcbec0;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+#svg-medical-square .cls-2 {
+  fill: #bcbec0;
+}
+#svg-medical-square .cls-3 {
+  fill: #414141;
+}
+#svg-medical-square .cls-4 {
+  fill: #c4c4c4;
+}
+#svg-medical-square .cls-5 {
+  fill: #d42d27;
+}
+#svg-medical-square .cls-6 {
+  fill: #f5f5f5;
+}
+#svg-medical-square-g-01 {
+  transform: rotate(30deg);
+}
+.svg:hover #svg-medical-square-g-01 {
+  transform: rotate(120deg);
+}
+/*Medical Square css end*/
+/*Articles css begin*/
+#svg-articles .cls-1 {
+  fill: #fbca62;
+}
+#svg-articles .cls-2 {
+  fill: #ededed;
+}
+#svg-articles .cls-3 {
+  fill: #dcdbdb;
+}
+#svg-articles .cls-4 {
+  fill: #414141;
+}
+#svg-articles .cls-5 {
+  fill: #d1d3d4;
+}
+#svg-articles .cls-6 {
+  fill: #fff;
+}
+#svg-articles .cls-7 {
+  fill: #f36e41;
+}
+#svg-articles .cls-8 {
+  fill: #e6e5e5;
+}
+#svg-articles .cls-10,
+#svg-articles .cls-9 {
+  fill: none;
+  stroke-miterlimit: 10;
+}
+#svg-articles .cls-9 {
+  stroke: #a7a9ac;
+}
+#svg-articles .cls-10 {
+  stroke: #9cceee;
+}
+#svg-articles .cls-11 {
+  fill: #5eb8e8;
+}
+#svg-articles-g-02 {
+  transform: translateY(33px);
+}
+.svg:hover #svg-articles-g-02 {
+  transform: translateY(-33px);
+}
+/*Articles css end*/
+/*Slide css begin*/
+#svg-slide .cls-1 {
+  fill: #fff;
+  stroke: #c4c4c3;
+  stroke-width: 2px;
+}
+#svg-slide .cls-2 {
+  fill: #263f6a;
+}
+#svg-slide .cls-3 {
+  fill: #414141;
+}
+#svg-slide .cls-4 {
+  fill: #546778;
+}
+#svg-slide .cls-5 {
+  fill: #f26a50;
+}
+#svg-slide .cls-6 {
+  fill: #9cceee;
+}
+#svg-slide .cls-7 {
+  fill: #f79d87;
+}
+#svg-slide-g-01 {
+  transform: scaleY(1);
+}
+#svg-slide-g-02 {
+  transform: translateY(0);
+}
+#svg-slide-g-03 {
+  transform: translateY(0);
+}
+#svg-slide-g-04 {
+  opacity: 1;
+}
+#svg-slide-g-05 {
+  transform: scale(0.6);
+}
+#svg-slide-g-06 {
+  transform: translateY(0);
+}
+.svg:hover #svg-slide-g-01 {
+  transform: scaleY(1.4);
+}
+.svg:hover #svg-slide-g-02 {
+  transform: translateY(-11px);
+}
+.svg:hover #svg-slide-g-03 {
+  transform: translateY(15px);
+}
+.svg:hover #svg-slide-g-04 {
+  opacity: 0;
+}
+.svg:hover #svg-slide-g-05 {
+  transform: scale(1);
+}
+.svg:hover #svg-slide-g-06 {
+  transform: translateY(15px);
+}
+/*Slide css end*/
+/*FAQ css begin*/
+#svg-faq .cls-1 {
+  fill: #263f6a;
+}
+#svg-faq .cls-2 {
+  fill: #cccbca;
+}
+#svg-faq .cls-3 {
+  fill: #fff;
+  stroke: #c4c4c3;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+#svg-faq .cls-4 {
+  fill: #7d605b;
+}
+#svg-faq .cls-5 {
+  fill: #f26a50;
+}
+#svg-faq-g-01 {
+  transform: scale(1) translateY(0);
+}
+#svg-faq-g-02 {
+  transform: scale(1) translateX(-5px);
+}
+#svg-faq-g-03 {
+  transform: scale(1);
+}
+.svg:hover #svg-faq-g-01 {
+  transform: scale(0.8) translateY(30px);
+}
+.svg:hover #svg-faq-g-02 {
+  transform: scale(1.3) translateX(3px);
+}
+.svg:hover #svg-faq-g-03 {
+  transform: scale(1.3);
+}
+/*FAQ css end*/
+/*Guideline css begin*/
+#svg-guideline .st0 {
+  fill: none;
+  stroke: #F26A50;
+  stroke-width: 8;
+  stroke-miterlimit: 10;
+}
+#svg-guideline .st1 {
+  fill: none;
+  stroke: #C4C4C3;
+  stroke-width: 4;
+  stroke-miterlimit: 10;
+}
+#svg-guideline .st2 {
+  fill: #9CCEEE;
+}
+#svg-guideline .st3 {
+  fill: #BDB4AE;
+}
+#svg-guideline .st4 {
+  fill: #213646;
+}
+#svg-guideline .st5 {
+  fill: #263F6A;
+}
+#svg-guideline-g-01 {
+  transform: scale(0.5) translateX(-60px);
+}
+#svg-guideline-g-02 {
+  opacity: 1;
+}
+.svg:hover #svg-guideline-g-01 {
+  transform: scale(1) translateX(0);
+}
+.svg:hover #svg-guideline-g-02 {
+  opacity: 0;
+}
+/*Guideline css end*/
+/*Lilly Product css begin*/
+#svg-lilly-product .cls-1 {
+  fill: #c4c4c4;
+}
+#svg-lilly-product .cls-2 {
+  fill: #d42d27;
+}
+#svg-lilly-product .cls-3 {
+  fill: #fff;
+}
+#svg-lilly-product .cls-4 {
+  fill: #4d4d4e;
+}
+#svg-lilly-product .cls-5 {
+  fill: #7d605b;
+}
+#svg-lilly-product .cls-6 {
+  fill: #4d4d4d;
+}
+#svg-lilly-product-g-01 {
+  transform: translateY(-15px);
+}
+#svg-lilly-product-g-02 {
+  transform: translate(0, -15px) rotate(0);
+}
+#svg-lilly-product-g-03 {
+  opacity: 0;
+  transform: translateX(0) scale(0);
+}
+.svg:hover #svg-lilly-product-g-01 {
+  transform: translateY(0px);
+}
+.svg:hover #svg-lilly-product-g-02 {
+  transform: translate(-5px, -5px) rotate(-45deg);
+}
+.svg:hover #svg-lilly-product-g-03 {
+  opacity: 1;
+  transform: translateX(20px) scale(1);
+}
+/*Lilly Product css end*/
+/*Corporate Site css begin*/
+#svg-corporate-site .cls-1 {
+  fill: #dcdbdb;
+}
+#svg-corporate-site .cls-2 {
+  fill: #9cceee;
+}
+#svg-corporate-site .cls-3,
+#svg-corporate-site .cls-4 {
+  fill: none;
+  stroke-miterlimit: 10;
+  stroke-width: 4px;
+}
+#svg-corporate-site .cls-3 {
+  stroke: #9cceee;
+}
+#svg-corporate-site .cls-4 {
+  stroke: #f26a50;
+}
+#svg-corporate-site-g-01 {
+  transform: translate(0, 0) rotate(0) scale(1);
+}
+#svg-corporate-site-g-02 {
+  transform: translate(0, 0) rotate(0);
+  opacity: 1;
+}
+#svg-corporate-site-g-03 {
+  transform: translate(0, 0) rotate(0);
+  opacity: 0;
+}
+.svg:hover #svg-corporate-site-g-01 {
+  transform: translate(-5px, 20px) rotate(-30deg) scale(0.8);
+}
+.svg:hover #svg-corporate-site-g-02 {
+  transform: translate(-5px, 15px) rotate(-20deg);
+  opacity: 0;
+}
+.svg:hover #svg-corporate-site-g-03 {
+  transform: translate(-5px, 15px) rotate(-20deg);
+  opacity: 1;
+}
+/*Corporate Site css end*/
+/*Product Information css begin*/
+#svg-product-information .cls-1 {
+  fill: #f26a50;
+}
+#svg-product-information .cls-2 {
+  fill: #c4c4c4;
+}
+#svg-product-information .cls-3 {
+  fill: #9cceee;
+}
+#svg-product-information .cls-4 {
+  fill: #7d605b;
+}
+#svg-product-information .cls-5 {
+  fill: #fff;
+}
+#svg-product-information .cls-6 {
+  fill: #d42d27;
+  transition: all 0.2s linear;
+}
+#svg-product-information-g-01 {
+  transform: translateY(0) scale(1);
+}
+#svg-product-information-g-02 {
+  transform: translateY(-5px) scale(0.8);
+}
+#svg-product-information-g-02 .cls-6 {
+  fill: #653E2D;
+}
+.svg:hover #svg-product-information-g-01 {
+  transform: translateY(10px) scale(0.9);
+}
+.svg:hover #svg-product-information-g-02 {
+  transform: translateY(0) scale(1);
+}
+.svg:hover #svg-product-information-g-02 .cls-6 {
+  fill: #d42d27;
+}
+/*Product Information css end*/
+/*Digital Tool css bgin*/
+#svg-digital-tool .cls-1 {
+  fill: #ffd99c;
+}
+#svg-digital-tool .cls-2 {
+  fill: #555;
+}
+#svg-digital-tool .cls-3 {
+  fill: #414141;
+}
+#svg-digital-tool .cls-4 {
+  fill: #5eb8e8;
+}
+#svg-digital-tool .cls-5 {
+  fill: #fff;
+}
+#svg-digital-tool-g-01 .cls-4 {
+  fill: #F66D43;
+  transition: all 0.2s linear;
+}
+#svg-digital-tool-g-02 {
+  opacity: 1;
+}
+#svg-digital-tool-g-03 {
+  opacity: 0;
+}
+#svg-digital-tool-g-04 {
+  transform: translate(0, 0) rotate(0);
+}
+.svg:hover #svg-digital-tool-g-01 .cls-4 {
+  fill: #5eb8e8;
+}
+.svg:hover #svg-digital-tool-g-02 {
+  opacity: 0;
+}
+.svg:hover #svg-digital-tool-g-03 {
+  opacity: 1;
+}
+.svg:hover #svg-digital-tool-g-04 {
+  transform: translate(-8px, 15px) rotate(-30deg);
+}
+/*Digital Tool css end*/
+  </style>
 
-      <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://public-assets.envato-static.com/icons/codecanyon.net/apple-touch-icon-72x72-precomposed.png" sizes="72x72" />
-  <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://public-assets.envato-static.com/icons/codecanyon.net/apple-touch-icon-114x114-precomposed.png" sizes="114x114" />
-  <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://public-assets.envato-static.com/icons/codecanyon.net/apple-touch-icon-144x144-precomposed.png" sizes="144x144" />
-<link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://public-assets.envato-static.com/icons/codecanyon.net/apple-touch-icon-precomposed.png" />
+</head>
 
-    <script src="https://public-assets.envato-static.com/assets/market/pages/full_screen_preview/index-20782f64714820245f68008404a2402c3dbf1975a741cb22ecad5adc1454b4b8.js"></script>
+<body>
 
-    <script>
-      //function to fix height of iframe!
-      var calcHeight = function() {
-        var headerDimensions = $('.preview__header').height();
-        $('.full-screen-preview__frame').height($(window).height() - headerDimensions);
-      }
-
-      $(document).ready(function() {
-        calcHeight();
-      });
-
-      $(window).resize(function() {
-        calcHeight();
-      }).load(function() {
-        calcHeight();
-      });
-    </script>
-
-
-  </head>
-  <body class="full-screen-preview">
-
-
-
-
-<iframe class="full-screen-preview__frame" src="https://previews.customer.envatousercontent.com/files/185920455/index.html" name="preview-frame" frameborder="0" noresize="noresize" data-view="fullScreenPreview">
-</iframe>
-
-
-    <script>$(function(){viewloader.execute(Views);});</script>
-
-
-<div id="affiliate-tracker" class="is-hidden" data-view="affiliatesTracker" data-cookiebot-enabled="true"></div>
-
-      <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="af9b8468-6418-4ac5-9fba-62c4ecf96338" type="text/javascript" async></script>
-
-
-  <script>
-  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-  setupGoogleAnalytics();
-
-    if (typeof Cookiebot !== 'undefined' && Cookiebot.consent && Cookiebot.consent.statistics ) {
-      loadGoogleAnalytics();
-    } else {
-      window.addEventListener('CookiebotOnAccept', function (e) {
-        if (Cookiebot.consent.statistics) {
-          loadGoogleAnalytics();
-        }
-      }, false);
-    }
-
-  function setupGoogleAnalytics() {
-    (function () {
-      ga("create", "UA-11834194-12", {"name":"m","allowLinker":true});
-
-      var ACCOUNTS = ["m"];
-      window._envGaTrackerNames = ACCOUNTS;
-
-      for (var i = 0; i < ACCOUNTS.length; i++) {
-        t = ACCOUNTS[i];
-
-        ga(t+'.require', 'linker');
-        ga(t+'.linker:autoLink', ["activeden.net","audiojungle.net","themeforest.net","videohive.net","graphicriver.net","3docean.net","codecanyon.net","photodune.net","market.styleguide.envato.com","elements.envato.com","build.envatohostedservices.com","author.envato.com","tutsplus.com","sites.envato.com"]);
-
-        ga(t+'.require', 'ec');
-
-        ga(t+'.require', 'displayfeatures');
-
-        ga(t+'.require', 'linkid', 'linkid.js');
-
-        ga(t+'.set', 'dimension20', 'other')
-
-
-
-        if ('') {
-          ga(t+'.send', {
-            hitType: 'pageview',
-            page: ''
-          });
-        } else if ('') {
-          // append the analytics_suffix to the page path so the flash alert/error type can be tracked
-          var analyticsSuffix = $.trim('').replace(/([A-Z])/g, '$1').replace(/[-_\s]+/g, '-').toLowerCase();
-          var uri = URI(window.location.pathname + window.location.search);
-          uri.path(uri.path() + '/' + analyticsSuffix);
-          var tracking_path = uri.path() + uri.search();
-          ga(t+'.send', {
-            hitType: 'pageview',
-            page: tracking_path,
-          });
-        } else {
-          ga(t+'.send', 'pageview');
-        }
-      }
-    }());
-  }
-
-  function loadGoogleAnalytics() {
-    (function () {
-
-      var s=document.createElement('script');
-      s.type='text/javascript';
-      s.async=true;
-        s.src='https://www.google-analytics.com/analytics.js';
-      var x=document.getElementsByTagName('script')[0];
-      x.parentNode.insertBefore(s,x);
-    }());
-  }
-
-
-</script>
-
-
-
-<script>
-
-    if (typeof Cookiebot !== 'undefined' && Cookiebot.consent && Cookiebot.consent.statistics ) {
-      enableGoogleAnalyticsLinkWrapper();
-    } else {
-      window.addEventListener('CookiebotOnAccept', function (e) {
-        if (Cookiebot.consent.statistics) {
-          enableGoogleAnalyticsLinkWrapper();
-        }
-      }, false);
-    }
-
-  function enableGoogleAnalyticsLinkWrapper() {
-    // GA: universal analytics link wrapper
-    (function(){
-        window._envTrkrs = [["m", "UA-11834194-12"]];
-
-        var debug = false;
-        var MAX_RETRIES = 10;
-
-        /*
-           The script needs to wait until the Analytics script
-           has been downloaded from Google before initializing
-        */
-        var waitForAnalytics = function(){
-            this.count = this.count || 0;
-
-            if (window.ga && ga.getByName) {
-                e.init();
-            } else {
-                if (count < MAX_RETRIES) { setTimeout(waitForAnalytics, 250); }
-                count++;
-            }
-        };
-
-        var e = {
-            _envArray: [],
-            _envTrkrs: (window._envTrkrsCust && window._envTrkrsCust.length) ? window._envTrkrs.concat(window._envTrkrsCust) : window._envTrkrs,
-            init: function() {
-                for (var i=0; i < _envTrkrs.length; i++) {
-                  if(!ga.getByName(_envTrkrs[i][0])) {
-                    ga("create", _envTrkrs[i][1], "auto", {name: _envTrkrs[i][0], allowLinker: true});
-                  }
-                }
-
-                document.addEventListener('DOMContentLoaded', function(){
-                    e.wrapperInit();
-                });
-
-                if (debug) {console.log('Initiated');}
-            },
-            wrapperInit: function() {
-                if (typeof window._envIsRunning != 'undefined' || window._envIsRunning == true) {
-                    return
-                }
-                window._envIsRunning = true;
-
-                if (document.addEventListener) {
-                    document.addEventListener('click', function(event){
-                        var target = event.target;
-                        if (target && target.tagName === 'A') {
-                            e._envLinksTracker(event);
-                        }
-                    });
-                }
-            },
-            isInArray: function(e, t) {
-                for (var n = 0; n < t.length; n++) {
-                    var r = new RegExp(t[n], 'i');
-                    if (r.test(e)) {
-                        return n
-                    }
-                }
-                return -1
-            },
-            _envTrackevent: function(e, t, n, r) {
-                for (var i = 0; i < this._envTrkrs.length; i++) {
-                    var s = this._envTrkrs[i][0].length == 0 ? '' : this._envTrkrs[i][0] + '.';
-                    r.length == 0 ? ga(s + 'send', 'event', e, t, n) : ga(s + 'send', 'event', e, t, n, r)
-                }
-            },
-            _envTrackpageview: function(e, t) {
-                t = t.charAt(0) == '/' ? t : '/' + t;
-                for (var n = 0; n < this._envTrkrs.length; n++) {
-                    var r = this._envTrkrs[n][0].length == 0 ? '' : this._envTrkrs[n][0] + '.';
-                    ga(r + 'send', 'pageview', e + t);
-                }
-            },
-            _envLinksTracker: function(t) {
-                var r = false;
-                var i = {
-                    outbound: {
-                        run: true,
-                        useEvent: true
-                    },
-                    download: {
-                        run: true,
-                        useEvent: true,
-                        reg: ''
-                    },
-                    self: {
-                        run: false,
-                        useEvent: true
-                    },
-                    mail: {
-                        run: true,
-                        useEvent: true
-                    },
-                    ext: /\.(doc.?|xls.?|ppt.?|exe|zip|rar|gz|tar|tgz|dmg|csv|pdf|xpi|txt|mp3)$/i
-                };
-                var s = t.srcElement ? t.srcElement : this;
-                if (t.srcElement) {
-                    r = true
-                }
-                while (s.tagName != 'A') {
-                    s = s.parentNode
-                }
-                if (s.href == undefined || s.href == null) {
-                    return true
-                }
-                var o = s.href;
-                if (o.length == 0) return;
-                var u = s.hostname.toLowerCase();
-                var a = s.pathname;
-                if (a.length == 0) {
-                    a = '/'
-                } else if (a.substr(0, 1) != '/') {
-                    a = '/' + a
-                }
-                var f = s.protocol;
-                var l = s.search;
-                var c = location.hostname;
-                c = c.replace(/^www\./i, '').toLowerCase();
-                u = u.replace(/^www\./i, '').toLowerCase();
-                if (o.match(/^#/)) {
-                    if (i.self.run) {
-                        i.self.useEvent ? e._envTrackevent('self', 'click - ' + c, o, '') : e._envTrackpageview('/virtual/self', '/' + o);
-                        return true
-                    }
-                } else if (f.match(/^mailto:/i)) {
-                    if (i.mail.run) {
-                        o = o.replace(/^mailto:/i, '');
-                        i.mail.useEvent ? e._envTrackevent('mailto', 'click - ' + c, o, '') : e._envTrackpageview('/virtual/mailto', o);
-                        return true
-                    }
-                } else if ((new RegExp(i.ext)).test(a)) {
-                    if (i.download.run) {
-                        o = o.replace(/^https?:\/\//i, '');
-                        i.download.useEvent ? e._envTrackevent('download', 'click - ' + c, o, '') : e._envTrackpageview('/virtual/download', o);
-                        return true
-                    }
-                } else if (u == undefined || u.length == 0 || f.match(/^javascript:/i)) {
-                    return
-                } else if ((new RegExp(c + '$', 'i')).test(u) || (new RegExp(u + '$', 'i')).test(c)) {
-                    if (i.download.run && i.download.reg.length != 0) {
-                        if ((new RegExp(i.download.reg, 'i')).test(a + l)) {
-                            o = o.replace(/^https?:\/\//i, '');
-                            i.download.useEvent ? e._envTrackevent('download', 'click - ' + c, o, '') : e._envTrackpageview('/virtual/download', o);
-                            return true
-                        }
-                    }
-                } else if (u != c) {
-                    if (e.isInArray(u, e._envArray) == -1) {
-                        if (i.outbound.run) {
-                            i.outbound.useEvent ? e._envTrackevent('outbound', 'click - ' + c, u + a + l, '') : e._envTrackpageview('/virtual/outbound', u + a);
-                            return true
-                        }
-                    } else if (e.isInArray(u, e._envArray) != -1) {
-                        var h = s.target;
-                        if (h != null && h == '_blank') {
-                            if ((new RegExp(/_utma=/)).test(l)) {
-                                return true
-                            }
-                            var p = e._envTrkrs[0][0].length == 0 ? '' : _envTrkrs[0][0] + '.';
-                            return true
-                        } else {
-                            return false
-                        }
-                    }
-                }
-            }
-        };
-
-        waitForAnalytics();
-    })()
-  }
-</script>
+  <div class="container">
+    <div class="box mr20">
+        <div class="title">Medical Square</div>
+        <div class="svg">
+            <svg id="svg-medical-square" width="180" height="180">
+                <title>Medical Square</title>
+                <g id="svg-medical-square-g-01">
+                    <polygon class="cls-1" points="60.22 140.82 31.02 90.24 60.22 39.67 118.62 39.67 147.81 90.24 118.62 140.82 60.22 140.82" />
+                    <path class="cls-2" d="M116.62,43.14v94.22L35,90.24l81.59-47.11m2-3.46L31,90.24l87.59,50.57V39.67h0Z" />
+                    <path class="cls-2" d="M62.22,43.14l81.59,47.11L62.22,137.35V43.14m-2-3.46V140.82l87.59-50.57L60.22,39.67h0Z" />
+                    <line class="cls-1" x1="118.62" y1="39.67" x2="61.12" y2="139.28" />
+                    <line class="cls-1" x1="60.22" y1="39.67" x2="118.62" y2="140.82" />
+                    <line class="cls-1" x1="31.46" y1="90.83" x2="147.81" y2="90.24" />
+                    <circle class="cls-3" cx="146.44" cy="90" r="8" />
+                    <circle class="cls-4" cx="31.46" cy="90.49" r="8" />
+                    <circle class="cls-3" cx="61.12" cy="39.67" r="8" />
+                    <circle class="cls-4" cx="118.62" cy="39.67" r="8" />
+                    <circle class="cls-4" cx="118.62" cy="140.82" r="8" />
+                    <circle class="cls-3" cx="60.22" cy="140.82" r="8" />
+                </g>
+                <g id="svg-medical-square-g-02">
+                    <circle class="cls-5" cx="89.42" cy="90.24" r="28.67" />
+                    <path class="cls-6" d="M102.42,98.61L99.51,97v2.48a0.65,0.65,0,0,1,0,.07c2.47,0.38,3.32,3.15,3.37,4.68l-1.4,0c0-.14-0.21-3.46-2.64-3.4s-2.49,3.23-2.48,3.37l-1.4,0c0-1.5.66-4.21,3.19-4.69a0.66,0.66,0,0,1,0-.1V96.3l-4-2.13V91.42a12,12,0,0,0,2.79-4.08,0.71,0.71,0,0,0,.15.08c0.75,0.23,1.75-.84,2.22-2.4s0.25-3-.5-3.23a0.83,0.83,0,0,0-.57.05h0l0,0a5.26,5.26,0,0,0,0-.53c0,0.05,0,.1,0,0.16v0c0-.19,0-0.38,0-0.57,0-6.35-3.71-10.15-8.28-10.15s-8.28,3.8-8.28,10.15c0,0.19,0,.38,0,0.57,0,0,0,0,0,0s0-.1,0-0.15c0,0.17,0,.34,0,0.52l0,0h0a0.83,0.83,0,0,0-.57-0.05c-0.75.23-1,1.68-.5,3.23s1.47,2.63,2.22,2.4A0.71,0.71,0,0,0,83,87.33a12,12,0,0,0,2.79,4.08V94l-1.72,1.08L81,96.78V101a2.1,2.1,0,1,1-1.4,0V97.53l-2,1.08c-3.24,1.8-5.87,3.58-5.87,5.08v2.92a0.92,0.92,0,0,0,.92.92h34.76a0.92,0.92,0,0,0,.92-0.92v-2.92C108.29,102.19,105.66,100.41,102.42,98.61Z" />
+                </g>
+            </svg>
+        </div>
+    </div>
+    <div class="box mr20">
+        <div class="title">Articles</div>
+        <div class="svg">
+            <svg id="svg-articles" width="180" height="180" viewBox="0 0 200 200">
+                <defs>
+                    <clipPath id="svg-articles-clip">
+                        <rect x="59.77" y="68" width="80" height="52" />
+                    </clipPath>
+                </defs>
+                <title>Articles</title>
+                <g id="svg-articles-g-01">
+                    <path class="cls-1" d="M47.6,122v12a4,4,0,0,0,4,4h96a4,4,0,0,0,4-4V122H47.6Z" />
+                    <polygon class="cls-2" points="115.6 154.01 83.6 154.01 87.6 130.01 111.6 130.01 115.6 154.01" />
+                    <rect class="cls-3" x="79.6" y="152.01" width="40" height="2" />
+                    <path class="cls-4" d="M147.6,62h-96a4,4,0,0,0-4,4v56h104V66a4,4,0,0,0-4-4h0Z" />
+                    <polygon class="cls-5" points="147.6 66.01 147.6 118.01 51.6 118.01 51.6 66.01 147.6 66.01 147.6 66.01" />
+                    <path class="cls-3" d="M47.6,122v12a4,4,0,0,0,4,4h96a4,4,0,0,0,4-4V122H47.6Z" />
+                    <circle class="cls-4" cx="99.6" cy="130.01" r="2" />
+                    <rect class="cls-6" x="59.77" y="66.01" width="80" height="52" />
+                </g>
+                <g clip-path="url(#svg-articles-clip)">
+                    <g id="svg-articles-g-02">
+                        <rect class="cls-7" x="62.59" y="35.93" width="22.62" height="6.78" />
+                        <rect class="cls-8" x="88.76" y="35.93" width="49.34" height="6.78" />
+                        <rect class="cls-8" x="62.04" y="74.2" width="76.06" height="2.24" />
+                        <rect class="cls-8" x="62.04" y="79.09" width="76.06" height="2.23" />
+                        <rect class="cls-8" x="62.04" y="83.76" width="76.06" height="2.23" />
+                        <rect class="cls-8" x="62.04" y="88.44" width="76.06" height="2.23" />
+                        <rect class="cls-8" x="62.04" y="116.61" width="76.06" height="2.24" />
+                        <rect class="cls-8" x="62.04" y="121.5" width="76.06" height="2.23" />
+                        <rect class="cls-8" x="62.04" y="126.18" width="76.06" height="2.23" />
+                        <rect class="cls-8" x="62.04" y="130.86" width="76.06" height="2.23" />
+                        <rect class="cls-8" x="62.04" y="93.28" width="43.38" height="2.23" />
+                        <rect class="cls-8" x="62.04" y="98.12" width="43.38" height="2.23" />
+                        <rect class="cls-8" x="62.04" y="102.96" width="43.38" height="2.23" />
+                        <rect class="cls-8" x="94.88" y="136.05" width="43.38" height="2.23" />
+                        <rect class="cls-8" x="94.88" y="140.89" width="43.38" height="2.23" />
+                        <rect class="cls-8" x="94.88" y="145.73" width="43.38" height="2.23" />
+                        <rect class="cls-7" x="62.04" y="108.91" width="76.06" height="6" />
+                        <polyline class="cls-9" points="62.59 46.53 62.59 70.2 136.8 70.2" />
+                        <polyline class="cls-10" points="72.3 65.31 89.21 63.81 99.97 54.12 114.29 57.18 128.78 51.42" />
+                        <circle class="cls-11" cx="89.14" cy="63.47" r="2" />
+                        <circle class="cls-11" cx="100.07" cy="53.99" r="2" />
+                        <circle class="cls-11" cx="114.57" cy="57.32" r="2" />
+                        <circle class="cls-11" cx="128.78" cy="51.99" r="2" />
+                        <circle class="cls-11" cx="72.3" cy="65.31" r="2" />
+                        <rect class="cls-8" x="107.89" y="93.23" width="30" height="12" />
+                        <rect class="cls-11" x="62.04" y="136.01" width="30" height="12" />
+                    </g>
+                </g>
+            </svg>
+        </div>
+    </div>
+    <div class="box mr20">
+        <div class="title">Slide</div>
+        <div class="svg">
+            <svg id="svg-slide" width="180" height="180" viewBox="0 0 200 200">
+                <title>Slide</title>
+                <g id="svg-slide-g-01">
+                    <rect class="cls-1" x="55.28" y="62.44" width="90.19" height="66.13" />
+                </g>
+                <g id="svg-slide-g-02">
+                    <rect class="cls-2" x="51.38" y="54.43" width="98" height="8.01" />
+                </g>
+                <g id="svg-slide-g-03">
+                    <rect class="cls-4" x="99.3" y="131.89" width="2.15" height="5.53" />
+                    <path class="cls-5" d="M100.37,135.87a5,5,0,1,0,5,5A5,5,0,0,0,100.37,135.87Zm0,7.91a2.87,2.87,0,1,1,2.87-2.88A2.88,2.88,0,0,1,100.37,143.78Z" />
+                    <rect class="cls-2" x="51.38" y="128.57" width="98" height="3.32" />
+                </g>
+                <g id="svg-slide-g-04">
+                    <rect class="cls-3" x="60.56" y="72.17" width="50" height="2" />
+                    <rect class="cls-3" x="60.56" y="68.17" width="38" height="2" />
+                </g>
+                <g id="svg-slide-g-05">
+                    <path class="cls-6" d="M110.58,83.14l9.55-14.2c-5.71-4.09-11.86-6.5-20.86-6.5V79.88C104.66,79.88,107.72,81.1,110.58,83.14Z" />
+                    <path class="cls-7" d="M115.14,97.08a14.31,14.31,0,0,1-2.1,7.45L125.38,112a28.8,28.8,0,0,0-7.9-38.36l-8.37,11.72A14.37,14.37,0,0,1,115.14,97.08Z" />
+                    <path class="cls-2" d="M113,104.53a14.38,14.38,0,0,1-12.3,6.95c-8,0-15.14-6.45-15.14-14.4s6.46-14.4,13.66-14.4V68.28c-14.4,0-28.06,12.89-28.06,28.8s13.26,28.8,29.17,28.8A29.1,29.1,0,0,0,125.19,112Z" />
+                </g>
+                <g id="svg-slide-g-06">
+                    <rect class="cls-6" x="60.56" y="118.17" width="6" height="6" />
+                    <rect class="cls-7" x="86.56" y="118.17" width="6" height="6" />
+                    <rect class="cls-2" x="111.56" y="118.17" width="6" height="6" />
+                    <rect class="cls-3" x="119.56" y="121.17" width="20" height="1" />
+                    <rect class="cls-3" x="94.56" y="121.17" width="10" height="1" />
+                    <rect class="cls-3" x="68.56" y="121.17" width="10" height="1" />
+                </g>
+            </svg>
+        </div>
+    </div>
+    <div class="box mr20">
+        <div class="title">FAQ</div>
+        <div class="svg">
+            <svg id="svg-faq" width="180" height="180" viewBox="0 0 200 200">
+                <title>FAQ</title>
+                <g id="svg-faq-g-01">
+                    <polygon class="cls-1" points="171.82 110.35 152.7 82 100 99.52 47.3 82 28.18 110.35 90.22 133.41 87.81 138.7 112.19 138.7 109.78 133.41 171.82 110.35" />
+                    <path class="cls-2" d="M148.73,84s1.28-.85-7,0L100,99.52,58.28,84c-8.28-.86-7,0-7,0L36.62,110.35c5.42-1,63.38,22.06,63.38,22.06s58-23,63.38-22.06Z" />
+                    <path class="cls-3" d="M141.72,84C111.45,78.58,100,99.29,100,99.29h0c-0.65-1-13.27-19.41-41.72-15.29l-14,24.2s36.31-2.71,55.73,19.35c19.43-22.06,55.73-19.35,55.73-19.35Z" />
+                </g>
+                <g id="svg-faq-g-02">
+                    <path class="cls-4" d="M62.34,97.56H54.9V61.87H75.36v6.2h-13v9.2H74.45v6.18H62.34V97.56Z" />
+                    <path class="cls-4" d="M104.19,97.56l-2.59-8.5h-13L86,97.56H77.85l12.6-35.84H99.7l12.65,35.84h-8.15ZM99.8,82.72q-3.59-11.55-4-13.06t-0.65-2.39q-0.81,3.13-4.61,15.45h9.3Z" />
+                    <path class="cls-4" d="M149.23,79.66A22.55,22.55,0,0,1,147,90.22a13.62,13.62,0,0,1-6.56,6.24l8.59,9.59h-9.69l-6.54-8h-0.56q-8.2,0-12.6-4.76t-4.39-13.67q0-8.91,4.41-13.61t12.63-4.7q8.23,0,12.59,4.74T149.23,79.66Zm-26,0q0,6,2.27,9a7.94,7.94,0,0,0,6.79,3q9.06,0,9.06-12t-9-12.06a8,8,0,0,0-6.81,3Q123.18,73.68,123.18,79.66Z" />
+                </g>
+                <g id="svg-faq-g-03">
+                    <path class="cls-5" d="M60.28,97.56H52.83V61.87H73.29v6.2h-13v9.2H72.39v6.18H60.28V97.56Z" />
+                    <path class="cls-5" d="M102.12,97.56l-2.59-8.5h-13l-2.59,8.5H75.78l12.6-35.84h9.25l12.65,35.84h-8.15ZM97.73,82.72q-3.59-11.55-4-13.06T93,67.26q-0.81,3.13-4.61,15.45h9.3Z" />
+                    <path class="cls-5" d="M147.17,79.66a22.55,22.55,0,0,1-2.23,10.56,13.62,13.62,0,0,1-6.56,6.24l8.59,9.59h-9.69l-6.54-8h-0.56q-8.2,0-12.6-4.76t-4.39-13.67q0-8.91,4.41-13.61t12.63-4.7q8.23,0,12.59,4.74T147.17,79.66Zm-26,0q0,6,2.27,9a7.94,7.94,0,0,0,6.79,3q9.06,0,9.06-12t-9-12.06a8,8,0,0,0-6.81,3Q121.12,73.68,121.12,79.66Z" />
+                </g>
+            </svg>
+        </div>
+    </div>
+    <div class="box">
+        <div class="title">Guideline</div>
+        <div class="svg">
+            <svg id="svg-guideline" width="180" height="180" viewBox="0 0 200 200">
+                <title>Guideline</title>
+                <g  id="svg-guideline-g-01">
+                    <path class="st0" d="M100.1,67.8c-21.9,0-39.7,17.8-39.7,39.7s17.8,39.7,39.7,39.7s39.7-17.8,39.7-39.7h-39.7"/>
+                    <path class="st1" d="M128.4,80.5h-16.1c-7.4,0-13.3-6-13.3-13.3c0-7.4,6-13.3,13.3-13.3h16.1"/>
+                    <circle class="st2" cx="128" cy="53.8" r="5"/>
+                    <circle class="st2" cx="128" cy="80.8" r="5"/>
+                    <ellipse transform="matrix(0.9993 -3.859485e-02 3.859485e-02 0.9993 -4.0725 4.0145)" class="st3" cx="101.9" cy="107.5" rx="7.5" ry="7.5"/>
+                    <ellipse transform="matrix(0.9993 -3.859485e-02 3.859485e-02 0.9993 -4.0725 4.0145)" class="st4" cx="101.9" cy="107.5" rx="5" ry="5"/>
+                </g>
+                <g  id="svg-guideline-g-02">
+                    <path class="st5" d="M104.1,107.5l-0.4-1.5h-0.2c-0.3,0.6-0.8,1-1.5,1.3c-0.6,0.3-1.4,0.5-2.2,0.5c-1.4,0-2.5-0.4-3.2-1.1 c-0.7-0.8-1.1-1.8-1.1-3.3v-7.8h3.3v7c0,0.9,0.2,1.5,0.5,2c0.3,0.4,0.8,0.6,1.5,0.6c0.9,0,1.6-0.3,2-0.9c0.4-0.6,0.6-1.6,0.6-3 v-5.6h3.3v12H104.1z"/>
+                    <path class="st5" d="M109.9,92.4c0-1.1,0.6-1.6,1.8-1.6s1.8,0.5,1.8,1.6c0,0.5-0.1,0.9-0.4,1.2c-0.3,0.3-0.7,0.4-1.3,0.4 C110.5,94,109.9,93.4,109.9,92.4z M113.3,107.5H110v-12h3.3V107.5z"/>
+                    <path class="st5" d="M120.5,107.7c-1.4,0-2.5-0.5-3.3-1.6c-0.8-1.1-1.2-2.6-1.2-4.6c0-2,0.4-3.5,1.2-4.6c0.8-1.1,1.9-1.6,3.4-1.6 c1.5,0,2.7,0.6,3.5,1.8h0.1c-0.2-0.9-.2-1.7-.2-2.4v-3.8h3.3v16.7h-2.5l-0.6-1.6h-0.1C123.2,107.1,122.1,107.7,120.5,107.7z M121.7,105.1c0.8,0,1.5-0.2,1.8-0.7c0.4-0.5,.6-1.3,.6-2.5v-0.4c0-1.3-0.2-2.2-0.6-2.8c-0.4-0.6-1-0.8-1.9-0.8 c-0.7,0-1.3,0.3-1.7,0.9c-0.4,0.6-0.6,1.5-0.6,2.7c0,1.2,0.2,2.1,0.6,2.7C120.3,104.8,120.9,105.1,121.7,105.1z"/>
+                    <path class="st5" d="M136.1,107.7c-1.9,0-3.4-0.5-4.5-1.6s-1.6-2.6-1.6-4.5c0-2,0.5-3.6,1.5-4.7c1-1.1,2.4-1.6,4.2-1.6 c1.7,0,3,0.5,4,1.5s1.4,2.3,1.4,4v1.6h-7.7c0,0.9,0.3,1.7,0.8,2.2s1.2,0.8,2.2,0.8c0.7,0,1.4-0.1,2.1-0.2s1.3-0.4,2-0.7v2.5 c-0.6,0.3-1.2,0.5-1.8,.6C137.8,107.6,137,107.7,136.1,107.7z M135.6,97.6c-0.7,0-1.2,0.2-1.6,0.7c-0.4,0.4-0.6,1.1-0.7,1.9h4.6 c0-.8-.2-1.4-.6-1.9C136.9,97.8,136.3,97.6,135.6,97.6z"/>
+                    <path class="st5" d="M146.9,107.5h-3.3V90.8h3.3V107.5z"/>
+                    <path class="st5" d="M150.2,92.4c0-1.1,0.6-1.6,1.8-1.6s1.8,0.5,1.8,1.6c0,0.5-0.1,0.9-0.4,1.2c-0.3,0.3-0.7,0.4-1.3,0.4 C150.8,94,150.2,93.4,150.2,92.4z M153.6,107.5h-3.3v-12h3.3V107.5z"/>
+                    <path class="st5" d="M168.2,107.5h-3.3v-7c0-0.9-0.2-1.5-0.5-2c-0.3-0.4-0.8-0.6-1.5-0.6c-0.9,0-1.6,0.3-2,0.9 c-.4,.6-.6,1.6-.6,3v5.7h-3.3v-12h2.5L160,97h0.2c0.4-0.6,0.9-1,1.5-1.3c0.6-0.3,1.4-0.4,2.2-0.4c1.4,0,2.5,0.4,3.2,1.1 c0.7,0.8,1.1,1.8,1.1,3.3V107.5z"/>
+                    <path class="st5" d="M177,107.7c-1.9,0-3.4-0.5-4.5-1.6s-1.6-2.6-1.6-4.5c0-2,0.5-3.6,1.5-4.7c1-1.1,2.4-1.6,4.2-1.6
+                    c1.7,0,3,0.5,4,1.5s1.4,2.3,1.4,4v1.6h-7.7c0,0.9,0.3,1.7,0.8,2.2s1.2,0.8,2.2,0.8c0.7,0,1.4-0.1,2.1-0.2s1.3-0.4,2-0.7v2.5 c-0.6,0.3-1.2,.5-1.8,.6C178.7,107.6,177.9,107.7,177,107.7z M176.5,97.6c-0.7,0-1.2,0.2-1.6,0.7c-0.4,0.4-0.6,1.1-0.7,1.9h4.6 c0-0.8-0.2-1.4-.6-1.9C177.8,97.8,177.2,97.6,176.5,97.6z"/></g>
+            </svg>
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="box mr20">
+        <div class="title">Product</div>
+        <div class="svg">
+            <svg id="svg-lilly-product" width="180" height="180" viewBox="0 0 200 200">
+                <title>Product</title>
+                <g id="svg-lilly-product-g-01">
+                    <rect class="cls-3" x="74.16" y="98.92" width="50.24" height="66.99" rx="8" ry="8" />
+                    <path class="cls-4" d="M117.7,102.27a3.35,3.35,0,0,1,3.35,3.35v53.59a3.35,3.35,0,0,1-3.35,3.35H80.86a3.35,3.35,0,0,1-3.35-3.35V105.62a3.35,3.35,0,0,1,3.35-3.35H117.7m0-3.35H80.86a6.7,6.7,0,0,0-6.7,6.7v53.59a6.7,6.7,0,0,0,6.7,6.7H117.7a6.7,6.7,0,0,0,6.7-6.7V105.62a6.7,6.7,0,0,0-6.7-6.7h0Z" />
+                    <rect class="cls-2" x="89.23" y="118.16" width="32.01" height="28.27" />
+                    <rect class="cls-3" x="101.14" y="121.27" width="20.1" height="3.35" />
+                    <rect class="cls-3" x="106.16" y="127.59" width="15.07" height="3.35" />
+                    <path class="cls-4" d="M110.28,93.87v4h-22v-4h22m4-4h-30v12h30v-12h0Z" />
+                    <polyline class="cls-3" points="110.28 93.87 110.28 97.87 88.28 97.87 88.28 93.87 110.28 93.87" />
+                </g>
+                <g id="svg-lilly-product-g-02">
+                    <path class="cls-5" d="M82.79,82.42h32a4,4,0,0,1,4,4v12a0,0,0,0,1,0,0h-40a0,0,0,0,1,0,0v-12A4,4,0,0,1,82.79,82.42Z" />
+                    <rect class="cls-6" x="82.79" y="82.92" width="4" height="16" />
+                    <rect class="cls-6" x="91.79" y="82.92" width="4" height="16" />
+                    <rect class="cls-6" x="101.79" y="82.92" width="4" height="16" />
+                    <rect class="cls-6" x="110.79" y="82.92" width="4" height="16" />
+                </g>
+                <g id="svg-lilly-product-g-03">
+                    <path class="cls-1" d="M109.69,60.1a11.18,11.18,0,0,0-2.45-.83,5.45,5.45,0,0,0-3.71.77,6.56,6.56,0,0,0-2.52,3.4L99.3,67.67l-0.69,1.72,1.1,0.44c0.93-2.35,1.8-4.75,2.86-7a4.31,4.31,0,0,1,3-2.3,6.64,6.64,0,0,1,5.72,2.4,4.31,4.31,0,0,1,.41,3.75c-0.81,2.33-1.85,4.61-2.78,6.9L110,74l1.94-4.81a19.62,19.62,0,0,0,1-2.7A5.56,5.56,0,0,0,109.69,60.1Z" />
+                    <path class="cls-2" d="M95.69,76.62A5.69,5.69,0,0,0,96,81.87a5.61,5.61,0,0,0,2.7,2.24,9.27,9.27,0,0,0,2.82.84A5.57,5.57,0,0,0,107,81.53l2.76-6.84-11.39-4.6Z" />
+                    <path class="cls-1" d="M116.9,34.72a11.18,11.18,0,0,0-2.23,1.3,5.45,5.45,0,0,0-1.86,3.3,6.56,6.56,0,0,0,.9,4.14l2.06,4.07,0.84,1.65,1.06-.54c-1.15-2.25-2.4-4.48-3.42-6.79a4.31,4.31,0,0,1,.23-3.76A6.64,6.64,0,0,1,120,35.37a4.31,4.31,0,0,1,3.1,2.16c1.23,2.14,2.26,4.42,3.37,6.63l1.06-.54L125.22,39a19.62,19.62,0,0,0-1.36-2.55A5.56,5.56,0,0,0,116.9,34.72Z" />
+                    <path class="cls-2" d="M120.13,56.13a5.69,5.69,0,0,0,4.16,3.22,5.61,5.61,0,0,0,3.46-.56,9.27,9.27,0,0,0,2.48-1.57,5.57,5.57,0,0,0,1-6.34l-3.33-6.58-11,5.55Z" />
+                </g>
+            </svg>
+        </div>
+    </div>
+    <div class="box mr20">
+        <div class="title">Corporate Site</div>
+        <div class="svg">
+            <svg id="svg-corporate-site" width="180" height="180" viewBox="0 0 200 200">
+                <title>Corporate Site</title>
+                <g id="svg-corporate-site-g-01">
+                    <polygon class="cls-1" points="36.34 106.52 36.36 96.77 102.85 77.45 102.75 127.04 61.92 114.45 63.69 134.85 52.08 134.83 48.03 110.15 36.34 106.52" />
+                    <rect class="cls-2" x="76.07" y="100.31" width="57.32" height="3.87" transform="translate(2.27 206.77) rotate(-89.88)" />
+                </g>
+                <g id="svg-corporate-site-g-02">
+                    <path class="cls-3" d="M126,122.51a31.14,31.14,0,0,0-2-44" />
+                    <path class="cls-3" d="M137.45,133a46.71,46.71,0,0,0-3-66" />
+                </g>
+                <g id="svg-corporate-site-g-03">
+                    <path class="cls-4" d="M126,122.51a31.14,31.14,0,0,0-2-44" />
+                    <path class="cls-4" d="M137.45,133a46.71,46.71,0,0,0-3-66" />
+                    <path class="cls-4" d="M147.92,142.89A60.72,60.72,0,0,0,144,57.11" />
+                </g>
+            </svg>
+        </div>
+    </div>
+    <div class="box mr20">
+        <div class="title">Product Information</div>
+        <div class="svg">
+            <svg id="svg-product-information" width="180" height="180" viewBox="0 0 200 200">
+                <title>Product Information</title>
+                <g id="svg-product-information-g-01">
+                    <rect class="cls-1" x="75.65" y="130.39" width="11.62" height="17.78" />
+                    <path class="cls-2" d="M90.72,104.53H72.52a1.89,1.89,0,0,0-2.1,1.54v1.72a1.89,1.89,0,0,0,2.1,1.54h18.2a1.89,1.89,0,0,0,2.1-1.54v-1.72A1.89,1.89,0,0,0,90.72,104.53Z" />
+                    <rect class="cls-2" x="80.02" y="96.34" width="3.2" height="12.8" />
+                    <path class="cls-2" d="M86.07,93H77.17a2.42,2.42,0,1,0,0,4.8h8.89A2.42,2.42,0,1,0,86.07,93Z" />
+                    <path class="cls-2" d="M81.91,149.89H81.18a0.83,0.83,0,0,0-.59,1V162a1,1,0,0,0,2,0V150.84A0.83,0.83,0,0,0,81.91,149.89Z" />
+                    <path class="cls-2" d="M85.41,109.53v37.21h-8V109.53h8m3.2-3.2H74.21v43.61h14.4V106.33h0Z" />
+                    <rect class="cls-2" x="81.24" y="118.4" width="6.4" height="1.6" />
+                    <rect class="cls-2" x="81.24" y="125.05" width="6.4" height="1.6" />
+                    <rect class="cls-2" x="81.24" y="133.05" width="6.4" height="1.6" />
+                    <rect class="cls-2" x="77.72" y="146.86" width="8" height="8" />
+                    <path class="cls-2" d="M116,93.59a28.93,28.93,0,0,0-6.68.39,14.1,14.1,0,0,0-8.14,5.45c-2.34,3.22-2.76,6.79-2.75,10.61v16.6h3.07c0-6.54-.3-13.15,0-19.68a11.16,11.16,0,0,1,4.93-8.41c2.45-1.68,5.15-1.88,8-1.88a13.35,13.35,0,0,1,8,2.1,11.16,11.16,0,0,1,4.63,8.6c0.32,6.39,0,12.86,0,19.26h3.07V113.19a50.78,50.78,0,0,0-.17-7.48A14.4,14.4,0,0,0,116,93.59Z" />
+                    <path class="cls-3" d="M98.42,146.82c0,4.85,1.83,9.38,5.84,12.31a14.53,14.53,0,0,0,8.65,2.76,24,24,0,0,0,7.58-.73,14.41,14.41,0,0,0,9.73-13.48V128.58H98.42v18.23Z" />
+                </g>
+                <g id="svg-product-information-g-02">
+                    <circle class="cls-4" cx="100.42" cy="59.82" r="24" />
+                    <path class="cls-5" d="M104.88,71.54c-0.29,0-1.94-.11-5.08-0.11-2.09,0-3.49.11-3.89,0.11-0.18,0-.29-0.07-0.29-0.36V70.46c0-.22.11-0.29,0.36-0.29h1.33A0.62,0.62,0,0,0,98,69.45c0.07-1.08.07-2.2,0.07-3.2L98,61.2c0-1-.22-1.73-1.73-2.27a0.47,0.47,0,0,1-.43-0.5V58c0-.11.07-0.18,0.4-0.29L101.6,56a3,3,0,0,1,1-.22,0.33,0.33,0,0,1,.36.43c-0.07.61-.07,2.88-0.07,6v3.85c0,1.4,0,2.7,0,3.1,0.07,0.68.25,0.94,0.65,0.94h1.3c0.29,0,.36.11,0.36,0.32v0.68A0.29,0.29,0,0,1,104.88,71.54ZM99.95,53.07a2.55,2.55,0,0,1-2.63-2.59,2.68,2.68,0,0,1,2.81-2.38,2.44,2.44,0,0,1,2.66,2.27A2.72,2.72,0,0,1,99.95,53.07Z" />
+                    <polygon class="cls-4" points="95.16 79.32 107.17 79.32 100.42 90.89 95.16 79.32" />
+                    <circle class="cls-6" cx="100.34" cy="53.19" r="31.2" />
+                    <path class="cls-5" d="M106.14,68.42c-0.37,0-2.53-.14-6.6-0.14-2.71,0-4.54.14-5.05,0.14-0.23,0-.37-0.09-0.37-0.47V67c0-.28.14-0.37,0.47-0.37h1.73a0.8,0.8,0,0,0,.89-0.94c0.09-1.4.09-2.86,0.09-4.17L97.21,55c0-1.31-.28-2.25-2.25-2.95a0.61,0.61,0,0,1-.56-0.66V50.87c0-.14.09-0.23,0.52-0.37l7-2.25a3.9,3.9,0,0,1,1.26-.28,0.43,0.43,0,0,1,.47.56c-0.09.8-.09,3.74-0.09,7.86v5c0,1.82,0,3.51,0,4,0.09,0.89.33,1.22,0.84,1.22h1.68c0.37,0,.47.14,0.47,0.42v0.89A0.37,0.37,0,0,1,106.14,68.42Zm-6.41-24A3.31,3.31,0,0,1,96.32,41,3.49,3.49,0,0,1,100,38a3.17,3.17,0,0,1,3.46,2.95A3.53,3.53,0,0,1,99.73,44.41Z" />
+                    <polygon class="cls-6" points="93.51 78.53 109.12 78.53 100.34 93.57 93.51 78.53" />
+                </g>
+            </svg>
+        </div>
+    </div>
+    <div class="box">
+        <div class="title">Digital Tool</div>
+        <div class="svg">
+            <svg id="svg-digital-tool" width="180" height="180" viewBox="0 0 200 200">
+                <title>Digital Tool</title>
+                <g id="svg-digital-tool-g-01">
+                    <circle class="cls-1" cx="97" cy="124.65" r="14.78" />
+                    <rect class="cls-2" x="72.58" y="42.67" width="46.13" height="86.49" rx="5.77" ry="5.77" />
+                    <rect class="cls-3" x="92.77" y="47.71" width="5.77" height="1.44" />
+                    <circle class="cls-3" cx="95.65" cy="123.39" r="2.9" />
+                    <rect class="cls-1" x="95.65" y="130.02" width="31.71" height="26.15" />
+                    <rect class="cls-4" x="75.47" y="54.2" width="40.36" height="63.43" />
+                </g>
+                <g id="svg-digital-tool-g-02">
+                    <rect class="cls-5" x="90" y="90" width="15" height="15" rx="2" ry="2" />
+                </g>
+                <g id="svg-digital-tool-g-03">
+                    <rect class="cls-5" x="78.21" y="76.21" width="10" height="10" rx="2" ry="2" />
+                    <rect class="cls-5" x="90.74" y="76.21" width="10" height="10" rx="2" ry="2" />
+                    <rect class="cls-5" x="78.21" y="60.99" width="10" height="10" rx="2" ry="2" />
+                    <rect class="cls-5" x="90.74" y="60.99" width="10" height="10" rx="2" ry="2" />
+                    <rect class="cls-5" x="103.27" y="60.99" width="10" height="10" rx="2" ry="2" />
+                    <rect class="cls-5" x="103.27" y="76.21" width="10" height="10" rx="2" ry="2" />
+                </g>
+                <g id="svg-digital-tool-g-04">
+                    <path class="cls-1" d="M121.6,118.34a5.76,5.76,0,0,0,5.77-5.77V112.3c0-3.65,0-13.36,3.8-19.39a5.77,5.77,0,0,0-9.76-6.15c-5.58,8.86-5.58,20.55-5.57,25.55v0.27A5.77,5.77,0,0,0,121.6,118.34Z" />
+                </g>
+                <g id="svg-digital-tool-g-05">
+                    <circle class="cls-1" cx="72.58" cy="94.42" r="5.77" />
+                    <circle class="cls-1" cx="72.58" cy="82.76" r="5.77" />
+                    <circle class="cls-1" cx="72.58" cy="105.96" r="5.77" />
+                    <path class="cls-1" d="M127.36,106.09v23.06H104.3A23.06,23.06,0,0,1,127.36,106.09Z" />
+                    <circle class="cls-1" cx="115.83" cy="129.16" r="11.53" />
+                    <circle class="cls-1" cx="72.58" cy="117.49" r="5.77" />
+                </g>
+            </svg>
+        </div>
+    </div>
+</div>
 
 
+</body>
 
-
-<script>
-  // Set New Relic custom attributes
-  (function () {
-    if (typeof newrelic !== 'undefined') {
-      newrelic.setCustomAttribute('pageType', 'other')
-    }
-  })()
-</script>
-
-  <script>
-    if (typeof Cookiebot !== 'undefined' && Cookiebot.consent && Cookiebot.consent.marketing) {
-      enableGoogleTagManager();
-    } else {
-      window.addEventListener('CookiebotOnAccept', function (e) {
-        if (Cookiebot.consent.marketing) {
-          enableGoogleTagManager();
-        }
-      }, false);
-    }
-
-  function enableGoogleTagManager() {
-    var gtmId = 'GTM-585RXMV';
-    // Google Tag Manager Tracking Code
-    (function(w,d,s,l,i) {
-      w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});
-      var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-      j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-      f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer',gtmId);
-
-
-    window.addEventListener('load', function() {
-      window.dataLayer.push({
-        event: 'pinterestReady'
-      });
-    });
-  }
-</script>
-
-
-  <div id="intercom-setup" class="is-hidden" data-view="intercomSetup" data-cookiebot-enabled="true" data-intercom-settings-payload="{&quot;app_id&quot;:&quot;s9exa3j0&quot;}" data-intercom-app-id="s9exa3j0" data-should-shutdown="false" data-should-hide="true"></div>
-
-
-</body></html>
+</html>
