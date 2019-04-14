@@ -1,4 +1,4 @@
-# umd2019
+# Evia
 ## Inspiration
 At my time while volunteering at a hospital, I observed that often there would be EMS bringing in patients without being able to check if the hospital actually had rooms and beds available in the Emergency Room. There were doctors and nurses running from patient to patient, getting information from each person and trying to decide who to see first all the while as EMS brought in more patients. It was chaos and I thought that there had to be something to change this problem and help both the staff and patients get the efficiency and care that they deserve.
 
