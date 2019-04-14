@@ -35,7 +35,6 @@ for h in hosp:
     temp = [h[0], h[1]]
     dist = readCSVs.euclidian(temp, [randX, randY])
     if dist < minD:
-        print(dist)
         minD = dist
         minX = h[0]
         minY = h[1]
@@ -46,9 +45,9 @@ for h in hosp:
 def medical_history():
     return render_template('medical_history.html')
 
-@bp.route('/results')
-def results():
-    return render_template('results.html')
+# @bp.route('/results')
+# def results():
+#     return render_template('results.html')
 
 @bp.route('/vitals')
 def vitals():
