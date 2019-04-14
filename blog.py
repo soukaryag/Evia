@@ -32,26 +32,31 @@ minD = 1000
 minX = 0
 minY = 0
 for h in hosp:
-    temp = (h[0], h[1])
-    dist = readCSVs.euclidian(temp, (randX, randY))
+    temp = [h[0], h[1]]
+    dist = readCSVs.euclidian(temp, [randX, randY])
     if dist < minD:
+        print(dist)
         minD = dist
         minX = h[0]
         minY = h[1]
 
-print(minD)
+# print(minX, minY)
 
-@bp.route('/locations')
-def arc():
-    return render_template('locations.html', hosp=json.dumps(hosp), l=l, lat=randY, lon=randX)
+@bp.route('/results')
+def results():
+    return render_template('results.html')
+
+@bp.route('/vitals')
+def vitals():
+    return render_template('vitals.html')
 
 @bp.route('/attached')
 def attached():
     return render_template('attached.html', lat=randY, lon=randX, minX=minX, minY=minY)
 
-@bp.route('/user_EMT')
-def user():
-    return render_template('user.html')
+@bp.route('/locations')
+def arc():
+    return render_template('locations.html', hosp=json.dumps(hosp), l=l, lat=randY, lon=randX)
 
 @bp.route('/biometrics')
 def biometrics():

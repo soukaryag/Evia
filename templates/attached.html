@@ -39,7 +39,7 @@ require([
     container: "viewDiv",
     map: map,
     center: [({{minX}}+{{lon}})/2,({{minY}}+{{lat}})/2],
-    zoom: 12,
+    zoom: 10,
     tilt: 70
   });
 
@@ -100,10 +100,10 @@ require([
 
    view.graphics.add(pointGraphic);
 
-   //
-   //
-   //
-   //
+
+
+
+
    var point = new Point({
      longitude: {{minX}},
      latitude: {{minY}}
@@ -111,14 +111,14 @@ require([
 
    // Create attributes
    var attributes = {
-     Name: "Closest Hospital",  // The name of the pipeline
-     City: "Maryland"  // The length of the pipeline
+     Name: "Emergency!",  // The name of the pipeline
+     City: "Hyattesville"  // The length of the pipeline
    };
 
    // Create popup template
    var popupTemplate = {
-     title: "Closest Hospital".
-     content: "Maryland"
+     title: "Emergency!",
+     content: "Hyattesville"
    };
 
    // Create a graphic and add the geometry and symbol to it
@@ -139,6 +139,8 @@ require([
 });</script>
 </head>
 <body>
-  <div id="viewDiv"></div>
+  <div id="viewDiv">
+      <button style="height: 100%; width" type="button" onclick="window.location.href='{{ url_for( 'blog.vitals' ) }}';">Confirm</button>
+  </div>
 </body>
 </html>

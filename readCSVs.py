@@ -1,10 +1,24 @@
 import pandas as pd
 import numpy as np
-from geopy.distance import great_circle
+# from geopy.distance import great_circle
+import math
 
 def euclidian(xf, hs):
-    distance = (great_circle(tuple(xf), tuple(hs)).miles)
+    # distance = (great_circle(tuple(xf), tuple(hs)).miles)
+    R = 6372800  # Earth radius in meters
+    lat1 = xf[0]
+    lon1 = xf[1]
+    lon2 = hs[1]
+    lat2 = hs[0]
 
+    phi1, phi2 = math.radians(lat1), math.radians(lat2)
+    dphi       = math.radians(lat2 - lat1)
+    dlambda    = math.radians(lon2 - lon1)
+
+    a = math.sin(dphi/2)**2 + \
+        math.cos(phi1)*math.cos(phi2)*math.sin(dlambda/2)**2
+
+    distance = 2*R*math.atan2(math.sqrt(a), math.sqrt(1 - a)) /1000
     return distance    #in miles
 
 
@@ -24,7 +38,6 @@ def giveHosp():
         if row['STATE'] == "MD":
             temp = [row['X'], row['Y']]
             euc = euclidian(xfinity, temp)
-            #print(row['NAME'],euc)
             if euc < 50:
                 md.append(row)
 
@@ -55,7 +68,7 @@ def giveEMS():
         if row['STATE'] == "MD":
             temp = [row['X'], row['Y']]
             euc = euclidian(xfinity, temp)
-            if euc < 3:
+            if euc < 50:
                 md.append(row)
 
     return md
