@@ -57,9 +57,14 @@ def vitals():
 def attached():
     return render_template('attached.html', lat=randY, lon=randX, minX=minX, minY=minY)
 
+@bp.route('/locations_found')
+def locations_found():
+    return render_template('locations_found.html', hosp=json.dumps(hosp), l=l, lat=randY, lon=randX)
+
 @bp.route('/locations')
 def arc():
-    return render_template('locations.html', hosp=json.dumps(hosp), l=l, lat=randY, lon=randX)
+    t = random.randint(4,8)
+    return render_template('locations.html', hosp=json.dumps(hosp), l=l, lat=randY, lon=randX, time=t)
 
 @bp.route('/biometrics')
 def biometrics():

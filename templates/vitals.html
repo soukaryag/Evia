@@ -641,16 +641,16 @@
   <div id="dockWrapper">
     <ul class="osx-dock">
       <li class="active" style="padding-right:4em">
-        <a href="#" title="Patient Info"><img src="https://image.flaticon.com/icons/svg/204/204258.svg" /></a>
+        <a href="#" title="Patient Info"><img src="{{ url_for('static', filename='images/patient.png') }}" /></a>
       </li>
       <li style="padding-right:4em">
-        <a href="#" title="Medical Condition"><img src="https://image.flaticon.com/icons/svg/204/204226.svg" /></a>
+        <a href="#" title="Medical Condition"><img src="{{ url_for('static', filename='images/condition.png') }}" /></a>
       </li>
         <li style="padding-right:4em">
-        <a href="/medical_history" title="Medical History"><img src="https://image.flaticon.com/icons/svg/204/204260.svg" /></a>
+        <a href="/medical_history" title="Medical History"><img src="{{ url_for('static', filename='images/history.png') }}" /></a>
       </li>
         <li style="padding-right:4em">
-        <a href="" title="Medication Given"><img src="https://image.flaticon.com/icons/svg/204/204234.svg" /></a>
+        <a href="" title="Medication Given"><img src="{{ url_for('static', filename='images/medication.png') }}" /></a>
       </li>
     </ul>
   </div>
