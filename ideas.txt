@@ -14,10 +14,137 @@ low on inventory/supplies.
 **
 the eight-minute target became the rigid ultimate standard of EMS operations.
 In extreme cases, ambulance services have been penalized for not meeting the
-standard of eight minutes.
+standard of eight minutes. Ambulances move 20 mph.
 
 **
 EMRs staff rural ambulance stations, community volunteer ambulance services,
 fire departments, police departments, industrial ambulances or mobile treatment
 centers.
 **
+
+
+Hospitals:
+
+1. Med-Ped Health Care
+- Pediatrics care
+- Family medicine
+- Internal medicine
+- Injury and Illness care
+- Motor Vehicle Accidents (MVAs)
+- Workman's compensation
+- Preventive health
+- Travel health
+- Flu vaccine/shots
+- Pre-employment physical exams
+- Routine physical exams
+- Sexually Transmitted Diseases (STDs) Testing
+- Osteoporosis diagnosis and treatment
+- Sports physical exam
+
+2. Med- Ped Health Care LLC
+- Internal Medicine
+- Pediatrics
+- Gastroenterology
+- Family Practice
+
+3. Doctors Community Hospital
+- Ambulatory Surgery Centers
+- Breast Health
+- Cancer Care
+- Digestive Disease Center
+- Emergency (24/7)
+- Endocrinology and Diabetes Care
+- Health and Wellness Center
+- Imaging Services
+- Infusion Services
+- Orthopedic Services
+- Primary Care
+- Rehabilitation Services
+- Sleep Care
+- Surgical Services
+- Bariatric and Weight Loss
+- Breast
+- General
+- Orthopedic
+- Thoracic
+- Vascular
+- Transitional Care
+
+4. George Washington University Hospitals
+- Cardiovascular Services
+  - Cardiac Cath Lab
+  - Cardiac Surgery
+  - Carotid Stenting
+  - Coronary Interventions
+  - Vascular Intervention
+  - Vascular Surgery
+- Emergency Services
+  - Emergency Department
+- Neurosciences
+  - Electroencephalography (EEG)
+- Oncology Services
+  - Radiation Therapy
+- Organ Transplant (Medicare certified)
+  -  Kidney Transplant (01/21/2016)
+- Orthopedic Services
+  - Arthroscopy
+  - Joint Replacement
+  - Spine Surgery
+  - Hemodialysis
+  - Obstetrics
+- Radiology / Nuclear Medicine / Imaging
+  - Computed Tomography (CT)
+  - Computed Tomography-Angiography (CTA)
+  - Digital Mammography
+  - Intensity-Modulated Radiation Therapy (IMRT)
+  - Magnetic Resonance Angiography (MRA)
+  - Magnetic Resonance Imaging (MRI)
+  - Positron Emission Tomography (PET)
+  - Single Photon Emission Computerized Tomography (SPECT)
+- Rehabilitation Services
+  - Physical Therapy
+  - Speech Therapy
+- Special Care
+  - Coronary Intensive Care (CCU)
+  - Intensive Care Unit (ICU)
+- Subprovider Units
+  - Psychiatric
+  - Rehabilitation
+- Surgery
+  - Inpatient Surgery
+  - Robotic Surgery
+- Wound Care
+  - Hyperbaric Oxygen
+  - Wound Care
+
+5. Holy Cross Hospital Emergency Room
+  - Bariatric Surgery
+  - Behavioral Health
+  - Breast Care
+  - Cancer
+  - Cardiac Care
+  - Emergency Medicine
+  - Epilepsy
+  - Gynecologic Surgery
+  - Hernia Surgery
+  - Interventional Procedures
+  - Joint Repair and Surgery
+  - Lung Cancer
+  - Maternity
+  - Neurosurgery
+  - Pelvic Health
+  - Pediatric Surgery
+  - Robotic Surgery
+  - Sleep Medicine
+  - Spine Surgery
+  - Stroke Care
+  - Surgical Services
+  - Women's Health
+
+6. Concentra Urgent care
+  - Occupational Health Services
+  - Occupational Therapy
+  - Physical Therapy
+  - Travel Health
+  - Urgent Care
+  - Workers Comp Injury Treatment
