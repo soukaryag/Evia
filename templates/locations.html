@@ -53,6 +53,44 @@ require([
     tilt: 70
   });
 
+  var data = {{ems|tojson}};
+  for (i = 0; i < {{l2}}; i++) {
+    // Create a point
+    var point = new Point({
+      longitude: JSON.parse(data)[i][0],
+      latitude: JSON.parse(data)[i][1]
+    });
+
+
+    // Create attributes
+    var attributes = {
+      Name: JSON.parse(data)[i][2],  // The name of the pipeline
+      City: JSON.parse(data)[i][4]  // The length of the pipeline
+    };
+
+    // Create popup template
+    var popupTemplate = {
+      title: JSON.parse(data)[i][2],
+      content: JSON.parse(data)[i][3]
+    };
+
+    // Create a graphic and add the geometry and symbol to it
+    var pointGraphic = new Graphic({
+      geometry: point,
+      symbol: {
+       type: "picture-marker",
+       url: "{{ url_for('static', filename='images/boom.png') }}",
+       width: "26px",
+       height: "26px"
+     },
+      attributes: attributes,
+      popupTemplate: popupTemplate
+    });
+
+    view.graphics.add(pointGraphic);
+  }
+
+  
   var data = {{hosp|tojson}};
   for (i = 0; i < {{l}}; i++) {
     // Create a point
@@ -91,43 +129,12 @@ require([
   }
 
 
-  // var point = new Point({
-  //   longitude: {{lon}},
-  //   latitude: {{lat}}
-  // });
-  //
-  // // Create attributes
-  // var attributes = {
-  //   Name: "Emergency!",  // The name of the pipeline
-  //   City: "Hyattesville"  // The length of the pipeline
-  // };
-  //
-  // // Create popup template
-  // var popupTemplate = {
-  //   title: "Emergency!",
-  //   content: "Hyattesville"
-  // };
-  //
-  //
-  // // Create a graphic and add the geometry and symbol to it
-  // var pointGraphic = new Graphic({
-  //   geometry: point,
-  //   symbol: {
-  //    type: "picture-marker",
-  //    url: "https://cdn1.iconfinder.com/data/icons/building-and-construction-icons/512/Construction_25-06-512.png",
-  //    width: "48px",
-  //    height: "48px"
-  //  },
-  //   attributes: attributes,
-  //   popupTemplate: popupTemplate
-  // });
-  //
-  // view.graphics.add(pointGraphic);
+
 
 });</script>
 </head>
 <body>
-  <div style="width:100%; height:10%; background:#ff9f43"><button type="button" style="width:100%; height:100%; padding:0; margin:0;" onclick="window.location.href='{{ url_for( 'blog.attached' ) }}';" class="btn btn-1 btn-1c">Find Best Hospital</button></div>
+  <div style="width:100%; height:10%; background:#0abde3"><button type="button" style="width:100%; height:100%; padding:0; margin:0;" onclick="window.location.href='{{ url_for( 'blog.attached' ) }}';" class="btn btn-1 btn-1c">On Call...</button></div>
 
   <div id="viewDiv">
   </div>
